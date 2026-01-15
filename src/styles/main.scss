@@ -1,0 +1,18 @@
+// Main SCSS File - Landing Page Matrix
+// Import order: Variables -> Mixins -> Base -> Components
+
+// Configuration
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// Base styles
+@use 'base';
+
+// Components
+@use 'header';
+@use 'hero';
+@use 'personagens';
+@use 'faq';
+@use 'footer';
+@use 'modals';
+

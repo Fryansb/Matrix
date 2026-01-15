@@ -1,0 +1,79 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+/* FAQ Section */
+.faq {
+  padding: 5.6vw;
+
+  h2 {
+    text-align: center;
+    margin-bottom: $spacing-lg;
+    font-size: $font-size-title;
+  }
+
+  &__questions {
+    &__item {
+      background-color: $color-bg-medium;
+      margin-bottom: $spacing-md;
+      border-radius: 4px;
+      overflow: hidden;
+      border-left: 3px solid $color-primary;
+
+      &__question {
+        @include button-reset;
+        width: 100%;
+        text-align: left;
+        color: $color-text-primary;
+        font-size: 20px;
+        padding: $spacing-lg;
+        display: block;
+        cursor: pointer;
+        position: relative;
+        @include transition(color);
+
+        &:hover {
+          color: $color-primary;
+        }
+
+        &::after {
+          content: '+';
+          position: absolute;
+          top: 0;
+          right: $spacing-lg;
+          height: 100%;
+          @include flex-center;
+          font-size: 40px;
+          color: $color-primary;
+        }
+      }
+
+      &__answer {
+        height: 0;
+        overflow: hidden;
+        padding: 0 $spacing-lg;
+        @include transition(height, $transition-slow);
+        @include transition(padding, $transition-slow);
+      }
+
+      &--is-open {
+        .faq__questions__item__answer {
+          height: auto;
+          padding: 0 $spacing-lg $spacing-lg $spacing-lg;
+        }
+
+        .faq__questions__item__question::after {
+          content: '-';
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    padding: 8vw 4vw;
+
+    &__questions__item__question {
+      font-size: $font-size-large;
+      padding: 20px;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+// Variables
+$color-primary: #00ff41;
+$color-bg-dark: #0d0d0d;
+$color-bg-medium: #1a1a1a;
+$color-text-primary: #f9f9f9;
+$color-text-secondary: silver;
+
+// Typography
+$font-family-base: Arial, sans-serif;
+$font-family-mono: 'Courier New', monospace;
+
+$font-size-base: 16px;
+$font-size-small: 12px;
+$font-size-large: 18px;
+$font-size-title: 32px;
+$font-size-title-small: 28px;
+
+$line-height-base: 26px;
+$line-height-small: 22px;
+$line-height-large: 28px;
+$line-height-title: 42px;
+$line-height-title-small: 38px;
+
+// Spacing
+$spacing-xs: 8px;
+$spacing-sm: 12px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 40px;
+
+// Transitions
+$transition-base: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// Breakpoints
+$breakpoint-mobile: 768px;
+
+// Z-indexes
+$z-header: 10;
+$z-carousel-controls: 5;
+$z-modal: 1000;
+$z-hero-content: 1;

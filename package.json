@@ -1,0 +1,37 @@
+{
+  "name": "landing-page-matrix",
+  "version": "1.0.0",
+  "description": "Landing page temática do filme Matrix (1999) - Projeto educacional com FAQ accordion, header sticky, carousel e modals",
+  "main": "index.html",
+  "scripts": {
+    "dev": "gulp watch",
+    "build": "gulp",
+    "start": "gulp watch"
+  },
+  "keywords": [
+    "landing-page",
+    "matrix",
+    "gulp",
+    "scss",
+    "responsive",
+    "web-development",
+    "frontend"
+  ],
+  "author": "Fryansb <ryan.sbv2@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fryansb/Matrix"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.62.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-uglify": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}

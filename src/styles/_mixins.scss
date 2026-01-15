@@ -1,0 +1,49 @@
+@use 'variables' as *;
+
+// Mixins
+
+// Flexbox centering
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Transition
+@mixin transition($property: all, $duration: $transition-base) {
+  transition: $property $duration;
+}
+
+// Button reset
+@mixin button-reset {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+// Visually hidden (for screen readers only)
+@mixin sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+// Responsive breakpoint
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+// Hover effect with glow
+@mixin glow-effect($color: $color-primary) {
+  box-shadow: 0 0 20px rgba($color, 0.5);
+}

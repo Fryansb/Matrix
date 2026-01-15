@@ -1,0 +1,97 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+/* Reset e Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family-base;
+  list-style: none;
+}
+
+body {
+  background-color: $color-bg-dark;
+  color: $color-text-primary;
+}
+
+/* Accessibility - Screen Reader Only */
+.sr-only {
+  @include sr-only;
+}
+
+/* Typography Classes */
+.title {
+  font-size: $font-size-title;
+  line-height: $line-height-title;
+  color: $color-text-primary;
+  margin-bottom: $spacing-lg;
+
+  &--small {
+    font-size: $font-size-title-small;
+    line-height: $line-height-title-small;
+  }
+}
+
+.text {
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $color-text-secondary;
+  margin-bottom: 20px;
+
+  &-big {
+    font-size: $font-size-large;
+    line-height: $line-height-large;
+    color: $color-text-secondary;
+  }
+
+  &--small {
+    font-size: $font-size-small;
+    line-height: $line-height-small;
+    color: $color-text-secondary;
+  }
+}
+
+/* Buttons */
+.button {
+  @include flex-center;
+  @include transition(all);
+  padding: $spacing-sm $spacing-lg;
+  font-size: $font-size-base;
+  color: $color-text-primary;
+  background-color: $color-primary;
+  text-transform: uppercase;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  border: 1px solid $color-primary;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #00cc33;
+    @include glow-effect;
+  }
+
+  &--primary {
+    background-color: $color-primary;
+    border-color: $color-primary;
+    color: $color-bg-dark;
+    font-weight: bold;
+
+    &:hover {
+      background-color: #00cc33;
+      transform: translateY(-2px);
+    }
+  }
+
+  &--dark {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-color: $color-primary;
+    color: $color-primary;
+
+    &:hover {
+      background-color: $color-primary;
+      color: $color-bg-dark;
+    }
+  }
+}
